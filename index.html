@@ -13,85 +13,104 @@
 :root{--blue:#0052CC;--blue-dark:#003d99;--orange:#E8672C;--dark:#0d1117;--surface:#f6f8fa;--border:#e1e4e8;--muted:#586069;--white:#fff}
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#24292e;background:#fff;-webkit-font-smoothing:antialiased;line-height:1.6}
 a{text-decoration:none;color:inherit}
+img{display:block;width:100%;height:100%;object-fit:cover}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.98);border-bottom:1px solid var(--border)}
 .logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.05rem;color:var(--dark);letter-spacing:-.5px}
-.logo-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:.85rem}
+.logo-icon{width:40px;height:40px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:.7rem;letter-spacing:.05em}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:.85rem;font-weight:500;color:var(--muted);transition:color .2s}
 .nav-links a:hover{color:var(--dark)}
 .nav-cta{background:var(--orange);color:#fff!important;padding:10px 24px;border-radius:8px;font-weight:600;font-size:.85rem;transition:background .2s}
 .nav-cta:hover{background:#d45a22}
 
-.hero{padding:140px 48px 80px;background:linear-gradient(160deg,#0d1117 0%,#1a2332 50%,#0d1117 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 50%,rgba(0,82,204,.15) 0%,transparent 60%)}
-.hero-content{position:relative;max-width:800px;margin:0 auto}
-.hero h1{font-size:3rem;font-weight:900;line-height:1.08;letter-spacing:-1.5px;margin-bottom:16px}
+.hero{height:100vh;min-height:600px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('assets/pumpjack.jpg') center/cover no-repeat}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,17,23,.7) 0%,rgba(13,17,23,.5) 40%,rgba(13,17,23,.8) 100%)}
+.hero-content{position:relative;z-index:1;max-width:800px;padding:0 24px}
+.hero h1{font-size:3.2rem;font-weight:900;line-height:1.08;letter-spacing:-1.5px;margin-bottom:16px}
 .hero h1 span{color:var(--orange)}
-.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.7);line-height:1.7;margin-bottom:36px;max-width:600px;margin-left:auto;margin-right:auto}
 .hero-btns{display:flex;gap:14px;justify-content:center}
-.btn-primary{background:var(--orange);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s}
+.btn-primary{background:var(--orange);color:#fff;padding:16px 36px;border-radius:10px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:all .2s}
 .btn-primary:hover{background:#d45a22;transform:translateY(-1px)}
-.btn-ghost{background:transparent;color:#fff;padding:14px 32px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
-.btn-ghost:hover{border-color:rgba(255,255,255,.4)}
-.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.1)}
-.hero-stat{text-align:center}
-.hero-stat-num{font-size:1.8rem;font-weight:900;color:#fff}
-.hero-stat-label{font-size:.75rem;color:rgba(255,255,255,.4);font-weight:500;margin-top:2px}
+.btn-ghost{background:rgba(255,255,255,.1);color:#fff;padding:16px 36px;border-radius:10px;font-weight:600;font-size:1rem;border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:all .2s;backdrop-filter:blur(8px)}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4);background:rgba(255,255,255,.15)}
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.4);font-size:.75rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase}
 
-.section{padding:80px 48px;max-width:1100px;margin:0 auto}
+.strip{background:var(--blue);color:#fff;padding:20px 48px;display:flex;justify-content:center;gap:48px;text-align:center}
+.strip-stat-num{font-size:1.4rem;font-weight:900}
+.strip-stat-label{font-size:.7rem;opacity:.7;font-weight:500;margin-top:1px}
+
+.section{padding:80px 48px;max-width:1200px;margin:0 auto}
 .section-center{text-align:center}
 .label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);margin-bottom:10px}
 .section h2{font-size:2rem;font-weight:900;color:var(--dark);letter-spacing:-.5px;line-height:1.15;margin-bottom:12px}
-.sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.7}
+.sub{font-size:1rem;color:var(--muted);max-width:540px;line-height:1.7}
 .section-center .sub{margin:0 auto}
 
-.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
-.product{border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s;background:#fff}
-.product:hover{box-shadow:0 16px 48px rgba(0,0,0,.08);transform:translateY(-4px)}
-.product-img{height:200px;background:linear-gradient(135deg,#f0f4f8,#e2e8f0);display:flex;align-items:center;justify-content:center;font-size:3rem}
-.product-body{padding:24px}
-.product-body h3{font-size:1.05rem;font-weight:800;margin-bottom:6px;color:var(--dark)}
-.product-body p{font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:16px}
-.product-link{font-size:.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:4px}
-.product-link:hover{color:var(--blue-dark)}
+.products-hero{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:40px}
+.products-hero .ph{position:relative;height:320px;overflow:hidden;cursor:pointer}
+.products-hero .ph img{transition:transform .6s}
+.products-hero .ph:hover img{transform:scale(1.05)}
+.products-hero .ph-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,.1) 60%);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:#fff}
+.products-hero .ph-overlay h3{font-size:1.2rem;font-weight:800;margin-bottom:4px}
+.products-hero .ph-overlay p{font-size:.85rem;opacity:.7}
+.ph-span2{grid-column:span 2}
 
-.features{background:var(--surface)}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+.product-card{border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s;background:#fff}
+.product-card:hover{box-shadow:0 16px 48px rgba(0,0,0,.1);transform:translateY(-4px)}
+.product-card-img{height:240px;overflow:hidden}
+.product-card-img img{transition:transform .4s}
+.product-card:hover .product-card-img img{transform:scale(1.04)}
+.product-card-body{padding:24px}
+.product-card-body h3{font-size:1.05rem;font-weight:800;margin-bottom:6px;color:var(--dark)}
+.product-card-body p{font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.product-card-link{font-size:.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:4px}
+.product-card-link:hover{color:var(--blue-dark)}
+
+.about-section{background:var(--dark);color:#fff}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;max-width:1200px;margin:0 auto}
+.about-img{min-height:500px;background:url('assets/yokes.jpg') center/cover no-repeat}
+.about-content{padding:64px;display:flex;flex-direction:column;justify-content:center}
+.about-content h2{font-size:2rem;font-weight:900;letter-spacing:-.5px;margin-bottom:16px}
+.about-content p{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:16px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}
+.about-stat{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:20px;border-radius:10px;text-align:center}
+.about-stat-num{font-size:1.6rem;font-weight:900;color:var(--orange)}
+.about-stat-label{font-size:.75rem;color:rgba(255,255,255,.5);margin-top:2px}
+
 .features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
-.feature{padding:28px;background:#fff;border:1px solid var(--border);border-radius:12px;text-align:center}
-.feature-icon{font-size:2rem;margin-bottom:14px}
-.feature h4{font-size:.9rem;font-weight:700;margin-bottom:4px;color:var(--dark)}
+.feature{padding:28px;background:var(--surface);border-radius:12px;border:1px solid var(--border);text-align:center}
+.feature h4{font-size:.9rem;font-weight:700;margin-bottom:6px;color:var(--dark)}
 .feature p{font-size:.8rem;color:var(--muted)}
 
-.about-section{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.about-text h2{font-size:2rem;font-weight:900;color:var(--dark);letter-spacing:-.5px;margin-bottom:16px}
-.about-text p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px}
-.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
-.about-stat{background:var(--surface);padding:20px;border-radius:10px;text-align:center}
-.about-stat-num{font-size:1.5rem;font-weight:900;color:var(--blue)}
-.about-stat-label{font-size:.75rem;color:var(--muted);margin-top:2px}
-.about-image{background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:16px;height:400px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:4rem;position:relative;overflow:hidden}
-.about-image::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.1) 0%,transparent 50%)}
-
-.cta{text-align:center;padding:80px 48px;background:var(--dark);color:#fff}
+.cta{position:relative;text-align:center;padding:100px 48px;overflow:hidden;color:#fff}
+.cta-bg{position:absolute;inset:0;background:url('assets/coils.jpg') center/cover no-repeat}
+.cta-bg::after{content:'';position:absolute;inset:0;background:rgba(13,17,23,.85)}
+.cta-content{position:relative;z-index:1}
 .cta h2{font-size:2rem;font-weight:900;letter-spacing:-.5px;margin-bottom:10px}
-.cta p{font-size:1rem;color:rgba(255,255,255,.5);max-width:460px;margin:0 auto 28px}
-.btn-white{background:#fff;color:var(--dark);padding:14px 36px;border-radius:10px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s}
-.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,255,255,.15)}
+.cta p{font-size:1rem;color:rgba(255,255,255,.6);max-width:460px;margin:0 auto 28px;line-height:1.7}
+.btn-white{background:#fff;color:var(--dark);padding:16px 40px;border-radius:10px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:all .2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,255,255,.2)}
 
 footer{padding:32px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.78rem}
 footer a{color:var(--blue)}
 
 @media(max-width:768px){
   .hero h1{font-size:2rem}
-  .hero{padding:100px 24px 48px}
-  .section{padding:48px 24px}
-  .products,.features-grid{grid-template-columns:1fr}
-  .about-section{grid-template-columns:1fr}
-  .about-image{height:250px}
+  .section{padding:48px 20px}
+  .products-hero{grid-template-columns:1fr}
+  .products-hero .ph{height:240px}
+  .ph-span2{grid-column:span 1}
+  .product-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .about-img{min-height:300px}
+  .features-grid{grid-template-columns:1fr 1fr}
   nav{padding:0 20px}
   .nav-links a:not(.nav-cta){display:none}
-  .hero-stats{gap:24px;flex-wrap:wrap}
+  .strip{flex-wrap:wrap;gap:24px}
   footer{flex-direction:column;gap:8px;text-align:center}
 }
 </style>
@@ -105,122 +124,143 @@ footer a{color:var(--blue)}
   </a>
   <div class="nav-links">
     <a href="#products">Products</a>
-    <a href="#features">Why Us</a>
+    <a href="#catalog">Catalog</a>
     <a href="#about">About</a>
     <a href="#contact" class="nav-cta">Request Quote</a>
   </div>
 </nav>
 
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-content">
-    <h1>Precision Inspection Equipment <span>You Can Trust</span></h1>
-    <p class="hero-sub">Premier manufacturer of magnetic particle inspection equipment, welding gauges, and ultrasonic testing tools. Built for oilfield, pipeline, and industrial applications.</p>
+    <h1>Precision Inspection Equipment <span>Built for the Field</span></h1>
+    <p class="hero-sub">Canadian-made magnetic particle inspection systems, welding gauges, and ultrasonic testing tools. Trusted by inspection professionals in 40+ countries.</p>
     <div class="hero-btns">
-      <a href="#products" class="btn-primary">Explore Products</a>
-      <a href="#contact" class="btn-ghost">Request Quote</a>
-    </div>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-label">Years in Business</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">40+</div><div class="hero-stat-label">Countries Served</div></div>
-      <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Canadian Made</div></div>
+      <a href="#products" class="btn-primary">Explore Equipment</a>
+      <a href="#contact" class="btn-ghost">Get a Quote</a>
     </div>
   </div>
+  <div class="hero-scroll">Scroll to explore</div>
 </section>
+
+<div class="strip">
+  <div><div class="strip-stat-num">50+</div><div class="strip-stat-label">Years Manufacturing</div></div>
+  <div><div class="strip-stat-num">40+</div><div class="strip-stat-label">Countries Served</div></div>
+  <div><div class="strip-stat-num">100%</div><div class="strip-stat-label">Canadian Made</div></div>
+  <div><div class="strip-stat-num">6</div><div class="strip-stat-label">Product Lines</div></div>
+</div>
 
 <section class="section" id="products">
   <div class="section-center">
-    <div class="label">Products</div>
-    <h2>Inspection Equipment Built to Last</h2>
-    <p class="sub">From magnetic particle testing to ultrasonic inspection — every tool engineered for reliability in the field.</p>
+    <div class="label">Product Categories</div>
+    <h2>Equipment Built to Perform</h2>
+    <p class="sub">From magnetic particle testing to ultrasonic inspection — engineered for reliability in the harshest conditions.</p>
   </div>
-  <div class="products">
-    <div class="product">
-      <div class="product-img">🧲</div>
-      <div class="product-body">
+  <div class="products-hero">
+    <div class="ph ph-span2">
+      <img src="assets/mpi.jpg" alt="MPI Equipment">
+      <div class="ph-overlay">
         <h3>MPI Equipment</h3>
-        <p>Magnetic particle inspection systems for detecting surface and near-surface discontinuities in ferromagnetic materials.</p>
-        <a href="/mpi-equipment-gallery" class="product-link">View Products →</a>
+        <p>Magnetic particle inspection systems for surface and near-surface flaw detection</p>
       </div>
     </div>
-    <div class="product">
-      <div class="product-img">📏</div>
-      <div class="product-body">
+    <div class="ph">
+      <img src="assets/gauges.png" alt="Welding Gauges">
+      <div class="ph-overlay">
         <h3>Pit & Welding Gauges</h3>
-        <p>Precision gauges for measuring pit depth, weld profile, and corrosion assessment. Industry-standard accuracy.</p>
-        <a href="/gauges-gallery" class="product-link">View Products →</a>
+        <p>Precision measurement for weld profiles and corrosion</p>
       </div>
     </div>
-    <div class="product">
-      <div class="product-img">🔊</div>
-      <div class="product-body">
+    <div class="ph">
+      <img src="assets/ultrasonics.jpg" alt="Ultrasonics">
+      <div class="ph-overlay">
         <h3>Ultrasonic Testing</h3>
-        <p>Advanced ultrasonic flaw detectors and thickness gauges for non-destructive testing applications.</p>
-        <a href="/ultrasonics-gallery" class="product-link">View Products →</a>
+        <p>Advanced flaw detectors and thickness gauges</p>
       </div>
     </div>
-    <div class="product">
-      <div class="product-img">🔋</div>
-      <div class="product-body">
+    <div class="ph">
+      <img src="assets/portable.jpg" alt="Portable Ultrasonics">
+      <div class="ph-overlay">
         <h3>Portable Ultrasonics</h3>
-        <p>Field-ready ultrasonic equipment designed for on-site inspection in demanding environments.</p>
-        <a href="/portable-ultrasonic-equipment-gallery" class="product-link">View Products →</a>
+        <p>Field-ready equipment for on-site inspection</p>
       </div>
     </div>
-    <div class="product">
-      <div class="product-img">⚡</div>
-      <div class="product-body">
+    <div class="ph">
+      <img src="assets/demag.jpg" alt="Pre-Weld Demagnetization">
+      <div class="ph-overlay">
         <h3>Pre-Weld Demagnetization</h3>
-        <p>Demagnetization equipment to eliminate arc blow and ensure quality welds on magnetized pipe and plate.</p>
-        <a href="/preweld-demagnetization-gallery" class="product-link">View Products →</a>
-      </div>
-    </div>
-    <div class="product">
-      <div class="product-img">🛢️</div>
-      <div class="product-body">
-        <h3>Oilfield Equipment</h3>
-        <p>Specialized inspection and measurement tools developed specifically for oilfield and pipeline applications.</p>
-        <a href="/oilfield-equipment-developments" class="product-link">View Products →</a>
+        <p>Eliminate arc blow on magnetized pipe and plate</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section features" id="features">
+<section class="section" id="catalog">
   <div class="section-center">
-    <div class="label">Why Western Instruments</div>
-    <h2>Trusted by inspection professionals worldwide.</h2>
+    <div class="label">Featured Products</div>
+    <h2>Industry-Standard Inspection Tools</h2>
+    <p class="sub">Every tool designed, manufactured, and calibrated in our Edmonton facility.</p>
   </div>
-  <div class="features-grid">
-    <div class="feature">
-      <div class="feature-icon">🍁</div>
-      <h4>Made in Canada</h4>
-      <p>Designed and manufactured in Edmonton, Alberta</p>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-card-img"><img src="assets/tri-gauge.jpg" alt="Tri-Gauge"></div>
+      <div class="product-card-body">
+        <h3>Tri-Gauge</h3>
+        <p>Three-in-one welding inspection gauge for measuring weld profile, undercut, and pit depth in a single tool.</p>
+        <a href="/gauges-gallery" class="product-card-link">View Details →</a>
+      </div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">🔬</div>
-      <h4>Precision Built</h4>
-      <p>Every tool meets or exceeds industry standards</p>
+    <div class="product-card">
+      <div class="product-card-img"><img src="assets/yokes.jpg" alt="MPI Yokes"></div>
+      <div class="product-card-body">
+        <h3>MPI Yokes</h3>
+        <p>Portable magnetic yokes for field inspection. Available in AC and permanent magnet configurations.</p>
+        <a href="/mpi-equipment-gallery" class="product-card-link">View Details →</a>
+      </div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">🌍</div>
-      <h4>Global Reach</h4>
-      <p>Shipping to 40+ countries worldwide</p>
+    <div class="product-card">
+      <div class="product-card-img"><img src="assets/vessel-kit.jpg" alt="Vessel Inspectors Kit"></div>
+      <div class="product-card-body">
+        <h3>Vessel Inspectors Kit</h3>
+        <p>Complete inspection kit with digital gauges, bridging bars, and accessories for pressure vessel inspection.</p>
+        <a href="/gauges-gallery" class="product-card-link">View Details →</a>
+      </div>
     </div>
-    <div class="feature">
-      <div class="feature-icon">📞</div>
-      <h4>Expert Support</h4>
-      <p>Direct access to our engineering team</p>
+    <div class="product-card">
+      <div class="product-card-img"><img src="assets/coils.jpg" alt="MPI Coils"></div>
+      <div class="product-card-body">
+        <h3>MPI Coils</h3>
+        <p>Multi-directional magnetizing coils for comprehensive inspection of complex geometries and weldments.</p>
+        <a href="/mpi-equipment-gallery" class="product-card-link">View Details →</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-card-img"><img src="assets/bridging.jpg" alt="Bridging Bars"></div>
+      <div class="product-card-body">
+        <h3>Bridging Bars & Pit Gauges</h3>
+        <p>Precision bridging bars with interchangeable dial indicators for accurate pit depth measurement.</p>
+        <a href="/gauges-gallery" class="product-card-link">View Details →</a>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-card-img"><img src="assets/calibration.jpg" alt="Calibration Block"></div>
+      <div class="product-card-body">
+        <h3>Calibration Equipment</h3>
+        <p>Reference standards and calibration blocks for verifying gauge accuracy in the field.</p>
+        <a href="/resources-1" class="product-card-link">View Resources →</a>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="about">
-  <div class="about-section">
-    <div class="about-text">
-      <div class="label">About Us</div>
-      <h2>Decades of inspection expertise.</h2>
-      <p>Western Instruments has been designing and manufacturing precision inspection equipment in Edmonton, Alberta for over 50 years. Our tools are used by inspection professionals across the oil and gas, pipeline, construction, and manufacturing industries.</p>
-      <p>Every product is engineered to perform reliably in the harshest conditions — from Arctic pipelines to desert oilfields.</p>
+<section class="about-section" id="about">
+  <div class="about-grid">
+    <div class="about-img"></div>
+    <div class="about-content">
+      <div class="label">About Western Instruments</div>
+      <h2>Decades of precision. Built in Alberta.</h2>
+      <p>Western Instruments has been designing and manufacturing precision inspection equipment in Edmonton, Alberta for over 50 years. Our tools are trusted by inspection professionals across oil and gas, pipeline, construction, and manufacturing industries worldwide.</p>
+      <p>Every product is engineered to perform in the harshest conditions — from Arctic pipelines to desert oilfields.</p>
       <div class="about-stats">
         <div class="about-stat"><div class="about-stat-num">50+</div><div class="about-stat-label">Years Experience</div></div>
         <div class="about-stat"><div class="about-stat-num">40+</div><div class="about-stat-label">Countries</div></div>
@@ -228,14 +268,41 @@ footer a{color:var(--blue)}
         <div class="about-stat"><div class="about-stat-num">100%</div><div class="about-stat-label">Canadian Made</div></div>
       </div>
     </div>
-    <div class="about-image">WI</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-center">
+    <div class="label">Why Western Instruments</div>
+    <h2>Trusted by inspection professionals worldwide.</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature">
+      <h4>Made in Canada</h4>
+      <p>Designed and manufactured in Edmonton, Alberta</p>
+    </div>
+    <div class="feature">
+      <h4>Precision Built</h4>
+      <p>Every tool meets or exceeds industry standards</p>
+    </div>
+    <div class="feature">
+      <h4>Global Shipping</h4>
+      <p>Delivering to 40+ countries worldwide</p>
+    </div>
+    <div class="feature">
+      <h4>Expert Support</h4>
+      <p>Direct access to our engineering team</p>
+    </div>
   </div>
 </section>
 
 <section class="cta" id="contact">
-  <h2>Need inspection equipment?</h2>
-  <p>Get a quote within 24 hours. Our team is ready to help you find the right tools for the job.</p>
-  <a href="mailto:info@westerninstruments.com" class="btn-white">Request a Quote</a>
+  <div class="cta-bg"></div>
+  <div class="cta-content">
+    <h2>Need inspection equipment?</h2>
+    <p>Get a quote within 24 hours. Our engineering team will help you find the right tools for the job.</p>
+    <a href="mailto:info@westerninstruments.com" class="btn-white">Request a Quote</a>
+  </div>
 </section>
 
 <footer>
