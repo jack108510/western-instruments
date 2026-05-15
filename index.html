@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Western Instruments — Precision Inspection Equipment</title>
+<meta name="description" content="Premier manufacturer of magnetic particle inspection equipment, welding gauges, and ultrasonic testing tools for oilfield and industrial applications.">
+<link rel="canonical" href="https://westerninstruments.com/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--blue:#0052CC;--blue-dark:#003d99;--orange:#E8672C;--dark:#0d1117;--surface:#f6f8fa;--border:#e1e4e8;--muted:#586069;--white:#fff}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:#24292e;background:#fff;-webkit-font-smoothing:antialiased;line-height:1.6}
+a{text-decoration:none;color:inherit}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:68px;display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.98);border-bottom:1px solid var(--border)}
+.logo{display:flex;align-items:center;gap:12px;font-weight:900;font-size:1.05rem;color:var(--dark);letter-spacing:-.5px}
+.logo-icon{width:36px;height:36px;background:var(--blue);border-radius:8px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:900;font-size:.85rem}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:.85rem;font-weight:500;color:var(--muted);transition:color .2s}
+.nav-links a:hover{color:var(--dark)}
+.nav-cta{background:var(--orange);color:#fff!important;padding:10px 24px;border-radius:8px;font-weight:600;font-size:.85rem;transition:background .2s}
+.nav-cta:hover{background:#d45a22}
+
+.hero{padding:140px 48px 80px;background:linear-gradient(160deg,#0d1117 0%,#1a2332 50%,#0d1117 100%);color:#fff;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse at 30% 50%,rgba(0,82,204,.15) 0%,transparent 60%)}
+.hero-content{position:relative;max-width:800px;margin:0 auto}
+.hero h1{font-size:3rem;font-weight:900;line-height:1.08;letter-spacing:-1.5px;margin-bottom:16px}
+.hero h1 span{color:var(--orange)}
+.hero-sub{font-size:1.1rem;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:32px;max-width:600px;margin-left:auto;margin-right:auto}
+.hero-btns{display:flex;gap:14px;justify-content:center}
+.btn-primary{background:var(--orange);color:#fff;padding:14px 32px;border-radius:10px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s}
+.btn-primary:hover{background:#d45a22;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:#fff;padding:14px 32px;border-radius:10px;font-weight:600;font-size:.95rem;border:1px solid rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
+.btn-ghost:hover{border-color:rgba(255,255,255,.4)}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:48px;padding-top:32px;border-top:1px solid rgba(255,255,255,.1)}
+.hero-stat{text-align:center}
+.hero-stat-num{font-size:1.8rem;font-weight:900;color:#fff}
+.hero-stat-label{font-size:.75rem;color:rgba(255,255,255,.4);font-weight:500;margin-top:2px}
+
+.section{padding:80px 48px;max-width:1100px;margin:0 auto}
+.section-center{text-align:center}
+.label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--orange);margin-bottom:10px}
+.section h2{font-size:2rem;font-weight:900;color:var(--dark);letter-spacing:-.5px;line-height:1.15;margin-bottom:12px}
+.sub{font-size:1rem;color:var(--muted);max-width:520px;line-height:1.7}
+.section-center .sub{margin:0 auto}
+
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.product{border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s;background:#fff}
+.product:hover{box-shadow:0 16px 48px rgba(0,0,0,.08);transform:translateY(-4px)}
+.product-img{height:200px;background:linear-gradient(135deg,#f0f4f8,#e2e8f0);display:flex;align-items:center;justify-content:center;font-size:3rem}
+.product-body{padding:24px}
+.product-body h3{font-size:1.05rem;font-weight:800;margin-bottom:6px;color:var(--dark)}
+.product-body p{font-size:.85rem;color:var(--muted);line-height:1.6;margin-bottom:16px}
+.product-link{font-size:.85rem;font-weight:700;color:var(--blue);display:inline-flex;align-items:center;gap:4px}
+.product-link:hover{color:var(--blue-dark)}
+
+.features{background:var(--surface)}
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+.feature{padding:28px;background:#fff;border:1px solid var(--border);border-radius:12px;text-align:center}
+.feature-icon{font-size:2rem;margin-bottom:14px}
+.feature h4{font-size:.9rem;font-weight:700;margin-bottom:4px;color:var(--dark)}
+.feature p{font-size:.8rem;color:var(--muted)}
+
+.about-section{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.about-text h2{font-size:2rem;font-weight:900;color:var(--dark);letter-spacing:-.5px;margin-bottom:16px}
+.about-text p{font-size:.95rem;color:var(--muted);line-height:1.8;margin-bottom:16px}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+.about-stat{background:var(--surface);padding:20px;border-radius:10px;text-align:center}
+.about-stat-num{font-size:1.5rem;font-weight:900;color:var(--blue)}
+.about-stat-label{font-size:.75rem;color:var(--muted);margin-top:2px}
+.about-image{background:linear-gradient(135deg,var(--blue),var(--blue-dark));border-radius:16px;height:400px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:4rem;position:relative;overflow:hidden}
+.about-image::after{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 30%,rgba(255,255,255,.1) 0%,transparent 50%)}
+
+.cta{text-align:center;padding:80px 48px;background:var(--dark);color:#fff}
+.cta h2{font-size:2rem;font-weight:900;letter-spacing:-.5px;margin-bottom:10px}
+.cta p{font-size:1rem;color:rgba(255,255,255,.5);max-width:460px;margin:0 auto 28px}
+.btn-white{background:#fff;color:var(--dark);padding:14px 36px;border-radius:10px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,255,255,.15)}
+
+footer{padding:32px 48px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:.78rem}
+footer a{color:var(--blue)}
+
+@media(max-width:768px){
+  .hero h1{font-size:2rem}
+  .hero{padding:100px 24px 48px}
+  .section{padding:48px 24px}
+  .products,.features-grid{grid-template-columns:1fr}
+  .about-section{grid-template-columns:1fr}
+  .about-image{height:250px}
+  nav{padding:0 20px}
+  .nav-links a:not(.nav-cta){display:none}
+  .hero-stats{gap:24px;flex-wrap:wrap}
+  footer{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="logo">
+    <div class="logo-icon">WI</div>
+    Western Instruments
+  </a>
+  <div class="nav-links">
+    <a href="#products">Products</a>
+    <a href="#features">Why Us</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-cta">Request Quote</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Precision Inspection Equipment <span>You Can Trust</span></h1>
+    <p class="hero-sub">Premier manufacturer of magnetic particle inspection equipment, welding gauges, and ultrasonic testing tools. Built for oilfield, pipeline, and industrial applications.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">Explore Products</a>
+      <a href="#contact" class="btn-ghost">Request Quote</a>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">50+</div><div class="hero-stat-label">Years in Business</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">40+</div><div class="hero-stat-label">Countries Served</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Canadian Made</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="products">
+  <div class="section-center">
+    <div class="label">Products</div>
+    <h2>Inspection Equipment Built to Last</h2>
+    <p class="sub">From magnetic particle testing to ultrasonic inspection — every tool engineered for reliability in the field.</p>
+  </div>
+  <div class="products">
+    <div class="product">
+      <div class="product-img">🧲</div>
+      <div class="product-body">
+        <h3>MPI Equipment</h3>
+        <p>Magnetic particle inspection systems for detecting surface and near-surface discontinuities in ferromagnetic materials.</p>
+        <a href="/mpi-equipment-gallery" class="product-link">View Products →</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-img">📏</div>
+      <div class="product-body">
+        <h3>Pit & Welding Gauges</h3>
+        <p>Precision gauges for measuring pit depth, weld profile, and corrosion assessment. Industry-standard accuracy.</p>
+        <a href="/gauges-gallery" class="product-link">View Products →</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-img">🔊</div>
+      <div class="product-body">
+        <h3>Ultrasonic Testing</h3>
+        <p>Advanced ultrasonic flaw detectors and thickness gauges for non-destructive testing applications.</p>
+        <a href="/ultrasonics-gallery" class="product-link">View Products →</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-img">🔋</div>
+      <div class="product-body">
+        <h3>Portable Ultrasonics</h3>
+        <p>Field-ready ultrasonic equipment designed for on-site inspection in demanding environments.</p>
+        <a href="/portable-ultrasonic-equipment-gallery" class="product-link">View Products →</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-img">⚡</div>
+      <div class="product-body">
+        <h3>Pre-Weld Demagnetization</h3>
+        <p>Demagnetization equipment to eliminate arc blow and ensure quality welds on magnetized pipe and plate.</p>
+        <a href="/preweld-demagnetization-gallery" class="product-link">View Products →</a>
+      </div>
+    </div>
+    <div class="product">
+      <div class="product-img">🛢️</div>
+      <div class="product-body">
+        <h3>Oilfield Equipment</h3>
+        <p>Specialized inspection and measurement tools developed specifically for oilfield and pipeline applications.</p>
+        <a href="/oilfield-equipment-developments" class="product-link">View Products →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section features" id="features">
+  <div class="section-center">
+    <div class="label">Why Western Instruments</div>
+    <h2>Trusted by inspection professionals worldwide.</h2>
+  </div>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">🍁</div>
+      <h4>Made in Canada</h4>
+      <p>Designed and manufactured in Edmonton, Alberta</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔬</div>
+      <h4>Precision Built</h4>
+      <p>Every tool meets or exceeds industry standards</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌍</div>
+      <h4>Global Reach</h4>
+      <p>Shipping to 40+ countries worldwide</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📞</div>
+      <h4>Expert Support</h4>
+      <p>Direct access to our engineering team</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="about-section">
+    <div class="about-text">
+      <div class="label">About Us</div>
+      <h2>Decades of inspection expertise.</h2>
+      <p>Western Instruments has been designing and manufacturing precision inspection equipment in Edmonton, Alberta for over 50 years. Our tools are used by inspection professionals across the oil and gas, pipeline, construction, and manufacturing industries.</p>
+      <p>Every product is engineered to perform reliably in the harshest conditions — from Arctic pipelines to desert oilfields.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="about-stat-num">50+</div><div class="about-stat-label">Years Experience</div></div>
+        <div class="about-stat"><div class="about-stat-num">40+</div><div class="about-stat-label">Countries</div></div>
+        <div class="about-stat"><div class="about-stat-num">6</div><div class="about-stat-label">Product Lines</div></div>
+        <div class="about-stat"><div class="about-stat-num">100%</div><div class="about-stat-label">Canadian Made</div></div>
+      </div>
+    </div>
+    <div class="about-image">WI</div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <h2>Need inspection equipment?</h2>
+  <p>Get a quote within 24 hours. Our team is ready to help you find the right tools for the job.</p>
+  <a href="mailto:info@westerninstruments.com" class="btn-white">Request a Quote</a>
+</section>
+
+<footer>
+  <p>&copy; 2026 Western Instruments Ltd. — Edmonton, Alberta, Canada</p>
+  <p><a href="/our-company">About</a> · <a href="/resources-1">Resources</a> · <a href="/contact">Contact</a></p>
+</footer>
+
+</body>
+</html>
