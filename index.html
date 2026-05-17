@@ -24,30 +24,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:72px;d
 .nav-cta:hover{background:var(--green-dark)}
 
 .hero{position:relative;display:flex;align-items:center;overflow:hidden;background:#0a0f1a}
-.hero-split{display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:92vh}
-.hero-content{padding:140px 64px 80px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.hero h1{font-size:3.2rem;font-weight:900;line-height:1.08;letter-spacing:-1.5px;color:#fff;margin-bottom:24px}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:100vh}
+.hero-content{padding:160px 80px 100px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2;max-width:640px}
+.hero h1{font-size:3.6rem;font-weight:900;line-height:1.06;letter-spacing:-1.5px;color:#fff;margin-bottom:28px}
 .hero h1 span{color:var(--green)}
-.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:36px;max-width:460px}
-.hero-btns{display:flex;gap:12px;margin-bottom:44px}
-.btn-primary{background:var(--green);color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.5);line-height:1.75;margin-bottom:40px;max-width:500px}
+.hero-btns{display:flex;gap:16px;margin-bottom:52px}
+.btn-primary{background:var(--green);color:#fff;padding:15px 34px;border-radius:8px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:.95rem;border:1.5px solid rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
-.btn-secondary:hover{border-color:rgba(255,255,255,.5)}
-.hero-badges{display:flex;gap:20px}
-.badge{display:flex;align-items:center;gap:8px;font-size:.82rem;color:rgba(255,255,255,.45);font-weight:500}
-.badge-icon{width:22px;height:22px;background:rgba(100,167,11,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:.65rem;font-weight:700}
+.btn-secondary{background:transparent;color:#fff;padding:15px 30px;border-radius:8px;font-weight:600;font-size:.95rem;border:1.5px solid rgba(255,255,255,.15);cursor:pointer;transition:all .2s}
+.btn-secondary:hover{border-color:rgba(255,255,255,.4)}
+.hero-badges{display:flex;gap:28px}
+.badge{display:flex;align-items:center;gap:10px;font-size:.88rem;color:rgba(255,255,255,.4);font-weight:500}
+.badge-icon{width:24px;height:24px;background:rgba(100,167,11,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:.7rem;font-weight:700}
 .hero-image{position:relative;background:#0a0f1a;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-image img{width:100%;height:100%;object-fit:cover;opacity:.85}
-.hero-image-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#0a0f1a 0%,rgba(10,15,26,.4) 30%,transparent 60%)}
-.hero-image-label{position:absolute;bottom:28px;right:28px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);padding:10px 18px;border-radius:8px;font-size:.8rem;font-weight:600;color:#fff;letter-spacing:.02em}
+.hero-image img{width:100%;height:100%;object-fit:cover;opacity:.8}
+.hero-image-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#0a0f1a 0%,rgba(10,15,26,.3) 35%,transparent 65%)}
+.hero-image-label{position:absolute;bottom:32px;right:32px;background:rgba(0,0,0,.5);backdrop-filter:blur(8px);padding:12px 20px;border-radius:8px;font-size:.82rem;font-weight:600;color:#fff;letter-spacing:.02em}
 
-.stats-bar{background:#000;color:#fff;padding:32px 48px;display:flex;justify-content:center;gap:72px;border-bottom:1px solid rgba(255,255,255,.08)}
+.stats-bar{background:#000;color:#fff;padding:40px 48px;display:flex;justify-content:center;gap:100px;border-bottom:1px solid rgba(255,255,255,.06)}
 .stat{text-align:center}
-.stat-num{font-size:2rem;font-weight:900;letter-spacing:-.5px;color:var(--green)}
-.stat-label{font-size:.72rem;color:rgba(255,255,255,.4);font-weight:600;margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
+.stat-num{font-size:2.4rem;font-weight:900;letter-spacing:-.5px;color:var(--green)}
+.stat-label{font-size:.75rem;color:rgba(255,255,255,.35);font-weight:600;margin-top:6px;text-transform:uppercase;letter-spacing:.08em}
 
-.section{padding:80px 48px;max-width:1200px;margin:0 auto}
+.section{padding:100px 48px;max-width:1200px;margin:0 auto}
 .section-center{text-align:center}
 .label{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--green);margin-bottom:10px}
 .section h2{font-size:2rem;font-weight:900;color:#fff;letter-spacing:-.5px;line-height:1.15;margin-bottom:12px}
@@ -79,7 +79,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:72px;d
 .product-card-link:hover{color:var(--green-dark)}
 
 .about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:0;min-height:500px}
-.about-img{background:url('assets/yokes.jpg') center/cover no-repeat;position:relative}
+.about-img{background:url('assets/yokes.jpg') center/cover no-repeat;position:relative;min-height:500px}
 .about-img::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 70%,var(--dark) 100%)}
 .about-content{background:var(--dark);color:#fff;padding:64px;display:flex;flex-direction:column;justify-content:center}
 .about-content h2{font-size:2rem;font-weight:900;letter-spacing:-.5px;margin-bottom:16px}
@@ -171,8 +171,6 @@ footer a{color:var(--green);font-weight:500}
   <div class="stat"><div class="stat-num">50+</div><div class="stat-label">Years Manufacturing</div></div>
   <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Countries Served</div></div>
   <div class="stat"><div class="stat-num">19</div><div class="stat-label">Acre Facility</div></div>
-  <div class="stat"><div class="stat-num">10,000</div><div class="stat-label">Sq. Ft. Building</div></div>
-  <div class="stat"><div class="stat-num">4</div><div class="stat-label">Product Lines</div></div>
 </div>
 
 <section class="section" id="products">
