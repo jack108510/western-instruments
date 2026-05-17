@@ -23,29 +23,29 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:0 48px;height:72px;d
 .nav-cta{background:var(--green);color:#fff!important;padding:10px 24px;border-radius:8px;font-weight:600;font-size:.875rem;transition:background .2s}
 .nav-cta:hover{background:var(--green-dark)}
 
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
-.hero-split{display:grid;grid-template-columns:1fr 1fr;width:100%}
+.hero{position:relative;display:flex;align-items:center;overflow:hidden;background:#0a0f1a}
+.hero-split{display:grid;grid-template-columns:1fr 1fr;width:100%;min-height:92vh}
 .hero-content{padding:140px 64px 80px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
-.hero h1{font-size:3.4rem;font-weight:900;line-height:1.05;letter-spacing:-2px;color:var(--dark);margin-bottom:20px}
+.hero h1{font-size:3.2rem;font-weight:900;line-height:1.08;letter-spacing:-1.5px;color:#fff;margin-bottom:24px}
 .hero h1 span{color:var(--green)}
-.hero-sub{font-size:1.1rem;color:var(--muted);line-height:1.8;margin-bottom:32px;max-width:480px}
-.hero-btns{display:flex;gap:12px;margin-bottom:40px}
-.btn-primary{background:var(--green);color:#fff;padding:16px 36px;border-radius:10px;font-weight:700;font-size:1rem;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.55);line-height:1.8;margin-bottom:36px;max-width:460px}
+.hero-btns{display:flex;gap:12px;margin-bottom:44px}
+.btn-primary{background:var(--green);color:#fff;padding:14px 32px;border-radius:8px;font-weight:700;font-size:.95rem;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
 .btn-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:var(--dark);padding:16px 32px;border-radius:10px;font-weight:600;font-size:1rem;border:2px solid var(--border);cursor:pointer;transition:all .2s}
-.btn-secondary:hover{border-color:#adb5bd}
-.hero-badges{display:flex;gap:24px}
-.badge{display:flex;align-items:center;gap:8px;font-size:.8rem;color:var(--muted);font-weight:500}
-.badge-icon{width:20px;height:20px;background:var(--green-light);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:.6rem;font-weight:700}
-.hero-image{position:relative;background:#f0f4f8;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-image img{width:100%;height:100%;object-fit:cover}
-.hero-image-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#fff 0%,transparent 15%)}
-.hero-image-label{position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,.95);padding:10px 16px;border-radius:8px;font-size:.75rem;font-weight:600;color:var(--dark)}
+.btn-secondary{background:transparent;color:#fff;padding:14px 28px;border-radius:8px;font-weight:600;font-size:.95rem;border:1.5px solid rgba(255,255,255,.2);cursor:pointer;transition:all .2s}
+.btn-secondary:hover{border-color:rgba(255,255,255,.5)}
+.hero-badges{display:flex;gap:20px}
+.badge{display:flex;align-items:center;gap:8px;font-size:.82rem;color:rgba(255,255,255,.45);font-weight:500}
+.badge-icon{width:22px;height:22px;background:rgba(100,167,11,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green);font-size:.65rem;font-weight:700}
+.hero-image{position:relative;background:#0a0f1a;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-image img{width:100%;height:100%;object-fit:cover;opacity:.85}
+.hero-image-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#0a0f1a 0%,rgba(10,15,26,.4) 30%,transparent 60%)}
+.hero-image-label{position:absolute;bottom:28px;right:28px;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);padding:10px 18px;border-radius:8px;font-size:.8rem;font-weight:600;color:#fff;letter-spacing:.02em}
 
-.stats-bar{background:var(--dark);color:#fff;padding:24px 48px;display:flex;justify-content:center;gap:64px}
+.stats-bar{background:#fff;color:var(--dark);padding:32px 48px;display:flex;justify-content:center;gap:72px;border-bottom:1px solid var(--border)}
 .stat{text-align:center}
-.stat-num{font-size:1.6rem;font-weight:900;letter-spacing:-.5px}
-.stat-label{font-size:.7rem;color:rgba(255,255,255,.5);font-weight:500;margin-top:2px}
+.stat-num{font-size:2rem;font-weight:900;letter-spacing:-.5px;color:var(--green)}
+.stat-label{font-size:.72rem;color:var(--muted);font-weight:600;margin-top:4px;text-transform:uppercase;letter-spacing:.06em}
 
 .section{padding:80px 48px;max-width:1200px;margin:0 auto}
 .section-center{text-align:center}
@@ -148,9 +148,9 @@ footer a{color:var(--green);font-weight:500}
   <div class="hero-split">
     <div class="hero-content">
       <h1>Precision Inspection Equipment <span>Built for the Field</span></h1>
-      <p class="hero-sub">Canadian-made MPI systems, welding gauges, and ultrasonic testing tools. Trusted by inspection professionals in over 40 countries for 50+ years.</p>
+      <p class="hero-sub">Canadian-made MPI systems, welding gauges, and ultrasonic testing tools — trusted by inspection professionals in over 40 countries for 50+ years.</p>
       <div class="hero-btns">
-        <a href="#products" class="btn-primary">Explore Equipment →</a>
+        <a href="#products" class="btn-primary">Explore Equipment</a>
         <a href="#contact" class="btn-secondary">Get a Quote</a>
       </div>
       <div class="hero-badges">
